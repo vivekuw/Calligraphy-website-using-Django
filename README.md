@@ -21,3 +21,6 @@ calligraphy website built with Django (backend) and HTML, CSS, Jinja (frontend).
 
 ## Workshop
 ![Workshop](https://raw.githubusercontent.com/vivekuw/Calligraphy-website-using-Django/main/website_img/workshop.png)
+
+## Admin panel
+![admin](https://raw.githubusercontent.com/vivekuw/Calligraphy-website-using-Django/main/website_img/admin.png)
