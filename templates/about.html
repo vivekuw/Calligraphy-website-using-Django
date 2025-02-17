@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<body class="sub_page">
+  <div class="top_container ">
+   {% include 'header.html '%}
+  </div>
+  <div class="common_style">
+
+    <section class="about_section">
+  <div class="container">
+    <div class="about_content justify-content-center text-center">
+
+      <div class="about_detail-box">
+        <h1>Ayushi Chedda</h1><br>
+        <h4>
+          I am a <b>certified professional calligrapher</b>, accredited by the <br>
+          Skill Development of India. "With five years of experience in calligraphy, <br>
+          I transform words into art, making every letter a reflection of elegance and creativity."
+        </h4>
+        <h4>+91 9152992202 <br></h4>
+        <h4>
+
+          <a href="https://wa.me/919152992202" class="call_to-btn btn_white-border" > Contact me Via Whatsapp</a>
+        </h4>
+    <div class="image-container d-flex flex-column align-items-center gap-2">
+  <img src="{% static 'images/cert1.jpg' %}" class="img-fluid w-25" alt="Certificate 1">
+  <img src="{% static 'images/cert2.jpg' %}" class="img-fluid w-25" alt="Certificate 2">
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="my_work_section">
+  <div class="container">
+    <div class="my_work_content text-center">
+      <div class="my_work_detail-box">
+        <h1>My Work</h1>
+        <div class="image-container d-flex flex-wrap justify-content-center gap-1">
+          <img src="{% static 'images/ph1.jpg' %}" class="img-fluid w-25" alt="Work 1">
+          <img src="{% static 'images/ph2.jpg' %}" class="img-fluid w-25" alt="Work 2">
+          <img src="{% static 'images/ph3.jpg' %}" class="img-fluid w-25" alt="Work 3">
+          <img src="{% static 'images/ph4.jpg' %}" class="img-fluid w-25" alt="Work 4">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </div>
+{% include 'footer.html'%}
+</body>
+</html>

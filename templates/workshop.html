@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body class="sub_page">
+  <div class="top_container ">
+
+
+{% include 'header.html '%}
+  </div>
+  <div class="common_style">
+<section class="why_section">
+  <div class="container">
+  <u><h1 class="text-center">Workshop</h1></u>
+    <div class="row justify-content-center text-center">
+
+      {% if work %}
+        {% for works in work %}
+          <div class="col-md-6 d-flex justify-content-center">
+            <div class="why_detail-box p-4">
+              <h2>{{ works.Name }}</h2>
+              <h4>
+                {{ works.Detail }} <br><br>
+                <strong>Slot:</strong> {{ works.Slot }} <br><br>
+                <strong>Date:</strong> {{ works.Date }} <br><br>
+                <strong>Location:</strong> {{ works.Location }} <br><br>
+                <strong>Prize:</strong> Rs. {{ works.Prize }} Per Person
+              </h4>
+              <div>
+                <a href="https://wa.me/919152992202?text=Hi,%20I%20am%20interested%20in%20this%20{{ works.Name }}" class="call_to-btn btn_white-border">
+                  Contact me
+                </a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <h3>No Upcoming Workshop</h3>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+
+
+  </div>
+
+{% include 'footer.html'%}
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<body>
+  <div class="top_container">
+{% include 'header.html '%}
+    <section class="hero_section ">
+      <div class="hero-container container">
+        <div class="hero_detail-box">
+          <h1>
+            Welcome to
+            <br>The Art of Calligraphy
+          </h1>
+          <h4>
+           " Where Ink Dances & Words Shine " <br>– Calligraphy by Ayushi
+          </h4>
+        </div>
+        <div class="hero_img-container">
+          <div>
+            <img src="{%static 'images/homefinal.png'%} " alt="" class="img-fluid" width="50" height="50">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- end header section -->
+
+  <div class="common_style">
+
+    <!-- about section -->
+    <section class="about_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="about_img-container">
+              <img src="{%static 'images/book1.png'%} " alt="" width="50">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="about_detail-box">
+              <h2>Ayushi Chedda</h2><br>
+              <h5>
+                I am a <b>certified professional calligrapher</b>, accredited by the <br>
+                Skill Development of India. " With five years of experience in <br>
+                calligraphy. I transform words into art, making every letter a reflection of elegance and creativity. "
+              </h5><br>
+              <div class="">
+                <a href="/about" class="call_to-btn btn_white-border">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end about section -->
+
+    <!-- admission section -->
+    <section class="admission_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="admission_detail-box">
+              <h3>
+                Courses
+              </h3>
+              <h4>
+                What You'll Learn:<br>
+              ✔ Basic strokes <br>
+              ✔ Alphabets <br>
+              ✔ Sentences & numbers <br>
+
+              No prior experience needed—anyone can join! <br>
+          </h4><br>
+              <div class="">
+                <a href="/course" class="call_to-btn btn_white-border">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="admission_img-container">
+              <img src="{%static 'images/home2.png'%} " alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="why_img-container">
+              <img src="{%static 'images/why.png'%} " alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="why_detail-box">
+              <h3>
+                WorkShop Events
+              </h3><br>
+
+              <h5>
+                Inkpen Calligraphy<br>
+                Brush Calligraphy<br>
+                Faux Calligraphy
+              </h5><br>
+              <div class="">
+                <a href="/workshop" class="call_to-btn btn_white-border">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- client section -->
+  <section class="client_section layout_padding text-center">
+    <h2 class="">
+      Reviews
+    </h2>
+    <div class="container">
+        {% for views in review %}
+            <div class="row justify-content-center mb-4 align-items-center">
+                <div class="col-md-3 text-left">
+                    <h5>{{ views.Name }}</h5>
+                </div>
+                <div class="col-md-6 text-left">
+                    <h4>{{ views.text }}</h4>
+                    <h4>Rating: {{ views.rating }} out of 5</h4>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% include 'footer.html' %}
+</body>
+</html>

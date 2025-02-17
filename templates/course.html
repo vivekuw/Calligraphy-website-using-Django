@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<body class="sub_page">
+  <div class="top_container ">
+{% include 'header.html '%}
+  </div>
+  <div class="common_style">
+    <section class="why_section">
+
+      <div class="container text-center">
+        <u><h1>Course</h1></u>
+        <div class="row justify-content-center text-center">
+
+          {% for course in Cou %}
+          <div class="col-md-6 d-flex justify-content-center">
+            <div class="why_detail-box p-4">
+              <h2>
+                {{ course.Name }}
+              </h2>
+              <h4>
+                {{course.Desc}}
+              </h4>
+              <h4>
+                Duration : {{course.Duration}}<br>
+                Mode : {{course.Mode}} <br>
+                Fees : {{course.Fees}} <br>
+                Certification : {{course.Certifiction}}<br>
+              </h4>
+              <div class="">
+               <a href="https://wa.me/919152992202?text=Hi,%20I%20am%20interested%20in%20this%20{{ course.Name }}%20workshop" class="call_to-btn btn_white-border">
+                  Contact me
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </div>
+{% include 'footer.html'%}
+</body>
+</html>
